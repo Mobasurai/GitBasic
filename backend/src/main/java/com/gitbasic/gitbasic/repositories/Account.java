@@ -6,17 +6,14 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 
+@Getter
 @Entity
 public class Account {
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Getter
     private String username;
-    @Getter
     private String email;
-    @Getter
     private String password;
 
     protected Account() {}
